@@ -1,5 +1,7 @@
+const baseURL = "https://mqttteste.onrender.com"; // substitua por sua URL real do Render
+
 function ligarLed() {
-    fetch('http://127.0.0.1:5000/ligar', {
+    fetch(`${baseURL}/ligar`, {
         method: "POST"
     })
     .then(response => response.text())
@@ -13,7 +15,7 @@ function ligarLed() {
 }
 
 function desligarLed() {
-    fetch('http://127.0.0.1:5000/desligar', {
+    fetch(`${baseURL}/desligar`, {
         method: "POST"
     })
     .then(response => response.text())
